@@ -33,7 +33,7 @@
 
       <div class="weather__moon">
         <img :src="`https://assets.hgbrasil.com/weather/icons/moon/${weatherData.moon_phase}.png`" class="weather__icon weather__icon--mini"/>
-        {{ weatherData.moon_phase }}
+        {{ translate(weatherData.moon_phase) }}
       </div>
     </div>
 
@@ -68,6 +68,7 @@
 <script setup lang="ts">
   import { ref } from 'vue'
   import { useStoreData } from '../stores/storedata.ts'
+  import translations from '../assets/translations.json'
 
   interface weatherForecast {
     date: string;
@@ -86,6 +87,10 @@
     moon_phase: string;
     condition_slug: string;
   }
+
+  const translate = (key: string) => {
+    return translations[key as keyof typeof translations] || key;
+  };
 
   const openweathermap_api_key = import.meta.env.VITE_OPENWEATHERMAP_API_KEY
 
