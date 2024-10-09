@@ -3,5 +3,11 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES6",  // Ou "ES2020" ou superior
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  }
 }

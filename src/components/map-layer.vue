@@ -13,7 +13,6 @@
     <ol-tile-layer>
       <ol-source-osm />
     </ol-tile-layer>
-
     <ol-vector-layer>
       <ol-source-vector>
         <ol-feature>
@@ -33,5 +32,5 @@
 </template>
 
 <script setup lang="ts">
-import { useStoreData } from '../stores/storedata.ts'
+  import { useStoreData } from '../stores/storedata.ts'
 </script>
