@@ -6,8 +6,8 @@
   >
     <ol-view
       ref="view"
-      :center="[-23.01, -45.53]"
-      :zoom="11"
+      :center="useStoreData.cityCoord"
+      :zoom="13"
       projection="EPSG:4326"
     />
     <ol-tile-layer>
@@ -17,7 +17,6 @@
     <ol-vector-layer>
       <ol-source-vector>
         <ol-feature>
-          <ol-geom-point :coordinates="[-23.01, -45.53]"></ol-geom-point>
           <ol-style>
             <ol-style-text
               :text="String.fromCodePoint(0xf041)"
@@ -34,4 +33,5 @@
 </template>
 
 <script setup lang="ts">
+import { useStoreData } from '../stores/storedata.ts'
 </script>
