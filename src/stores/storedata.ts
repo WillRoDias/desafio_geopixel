@@ -1,3 +1,4 @@
+// Gerenciamento de estado
 import { reactive } from "vue";
 
 const DEFAULT_COOR = [-45.53, -23.01];

@@ -3,6 +3,7 @@ describe('Weather App Tests', () => {
   const encodedCityName = encodeURIComponent(cityName);
   const urlWeather = `https://api.hgbrasil.com/weather?format=json-cors&array_limit=4&fields=only_results,description,temp,condition_slug,city_name,moon_phase,forecast,max,min,date,rain_probability&key=SUA-CHAVE&city_name=${encodedCityName}`
 
+  // Mock de dados para garantir a persistência de dados em alguns contextos de teste
   const mockWeatherData = {
     city_name: cityName,
     date: '09/10/2024',
